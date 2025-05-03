@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Profit Prediction</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 10px;
+            background: linear-gradient(115deg, #C1CFA1 20%, #A5B68D 80%);
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: #EDE8DC;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .container .text {
+            text-align: center;
+            font-size: 45px;
+            font-weight: 700;
+            color: #B17F59;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .form-row {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        label {
+            font-size: 18px;
+            color: #B17F59;
+        }
+
+        input {
+            width: 100%;
+            height: 50px;
+            border: 2px solid #A5B68D;
+            border-radius: 8px;
+            font-size: 18px;
+            padding-left: 15px;
+            color: #333;
+            background: #EDE8DC;
+        }
+
+        input:focus {
+            border-color: #B17F59;
+            background: #fff;
+        }
+
+        .submit-btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .submit-btn input {
+            width: 50%;
+            height: 55px;
+            background: #B17F59;
+            color: #EDE8DC;
+            font-size: 20px;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn input:hover {
+            background: #A5B68D;
+            color: #fff;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 28px;
+            color: #B17F59;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                padding: 30px;
+            }
+
+            .text {
+                font-size: 35px;
+            }
+
+            .submit-btn input {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text">Marketing Profit Prediction</div>
+        <form method="POST">
+            <div class="form-row">
+                <label for="rd">R&D Spend:</label>
+                <input type="number" step="any" name="rd" id="rd" required>
+            </div>
+            <div class="form-row">
+                <label for="ad">Administration:</label>
+                <input type="number" step="any" name="ad" id="ad" required>
+            </div>
+            <div class="form-row">
+                <label for="ms">Marketing Spend:</label>
+                <input type="number" step="any" name="ms" id="ms" required>
+            </div>
+            <div class="submit-btn">
+                <input type="submit" value="Predict">
+            </div>
+        </form>
+        <h2>{{ msg }}</h2>
+    </div>
+</body>
+
+</html>
